@@ -1,0 +1,88 @@
+/* Pengaturan Global */
+
+/* Mendaftarkan font ke dalam CSS, dan memberi nama family */
+@font-face {
+   font-family: 'Poppins';
+   src: url(../fonts/poppins.woff2);
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   /* agar scroll ketika klik pada navigasi menjadi halus */
+   scroll-behavior: smooth;
+}
+
+body {
+   /* mendaftarkan semua teks pada body menjadi family Poppins */
+   font-family: 'Poppins';
+}
+
+img {
+   /* 
+      mengatur agar semua elemen img memiliki panjang maksimal 100% agar
+      tidak besar gambar tidak melebihi layar ataupun pembungkus
+   */
+   max-width: 100%;
+}
+
+
+/* 
+   PERHATIKAN bahwa dalam mengatur elemen, nama elemen langsung ditulis
+   sedangkan untuk mengatur class, dibutuhkan tanda titik (.) terlebih dulu
+   img {} berarti elemen dengan tag img, 
+   sedangkan .img artinya elemen dengan kelas img   
+*/
+
+.baris {
+   /* 
+      display: flex memiliki pengaturan yang dapat mengatur agar elemen
+      di dalamnya memiliki ukuran yang fleksibel
+   */
+   display: flex;
+
+   /* 
+      align-items: center mengatur elemen di dalamnya rata tengah vertikal
+   */
+   align-items: center;
+
+   /* 
+      justify-content: center mengatur elemen di dalamnya rata tengah horizontal
+   */
+   justify-content: center;
+
+   /* 
+      flex-wrap: wrap mengatur agar jika panjang elemen berlebih, maka elemen
+      akan otomatis diletakan di baris baru
+   */
+   flex-wrap: wrap;
+}
+
+section {
+   /* text-align mengatur rata tulisan, bisa bernilai: left, right, center, justify */
+   text-align: center;
+}
+
+.col-profil img {
+   /* transition membuat animasi transisi dari perubahan style, 0.3s berarti 0.3 detik */
+   transition: all 0.3s ease;
+
+   /* border-radius  Membuat sudut membulat */
+   border-radius: 15px;
+
+   /* box-shadow membuat efek bayangan */
+   box-shadow: 0 3px 10px -2px #000;
+}
+
+/* :hover akan dijalankan saat mouse ada di atas elemen */
+.col-profil img:hover {
+
+   /* membuat transformasi, bisa berupa scale(1.05), rotate(180deg), translateY(-50px), dsb */
+   transform: scale(0.9);
+   border-radius: 50%;
+}
+
